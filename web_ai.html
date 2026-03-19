@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信仰 ‧ 重塑 | 頂級寺廟美學</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#0a0a0a',
+                            gold: '#D4AF37',
+                            darkgray: '#1a1a1a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .hide-section { display: none !important; }
+        .fade-in { animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        body { margin: 0; overflow: hidden; background-color: #0a0a0a; color: white; }
+
+        .slide-wrapper {
+            transition: transform 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+            will-change: transform;
+        }
+
+        /* 加速景深變化的過渡動畫，手感更滑順 */
+        .gallery-item {
+            transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+            will-change: transform, opacity, filter;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="fixed w-full z-50 top-0 px-6 py-4 flex justify-between items-center bg-black/80 backdrop-blur-md border-b border-white/10 transition-all duration-300">
+        <div class="text-2xl font-black tracking-widest text-brand-gold uppercase cursor-pointer" onclick="goToSection('hero')">
+            TEMPLE.
+        </div>
+        <div class="space-x-8 text-sm font-bold tracking-wider hidden md:block">
+            <button onclick="goToSection('hero')" class="hover:text-brand-gold transition duration-300 uppercase">Home Page</button>
+            <button onclick="goToSection('gallery')" class="hover:text-brand-gold transition duration-300 uppercase">MOMENTS</button>
+            <button onclick="goToSection('events')" class="hover:text-brand-gold transition duration-300 uppercase">最新活動</button>
+            <button onclick="goToSection('visit')" class="hover:text-brand-gold transition duration-300 uppercase">參拜指南</button>
+            
+            <button onclick="switchView('history')" class="hover:text-brand-gold transition duration-300 uppercase border-l border-white/20 pl-8">歷史淵源</button>
+            <button onclick="switchView('gods')" class="hover:text-brand-gold transition duration-300 uppercase">眾神殿</button>
+        </div>
+    </nav>
+
+    <div id="view-home" class="h-screen w-full md:overflow-hidden overflow-y-auto fade-in relative">
+        <div id="home-wrapper" class="slide-wrapper w-full h-full">
+
+            <section id="hero" class="h-screen w-full relative flex flex-col justify-center items-center text-center px-4">
+                <div class="absolute inset-0 z-0 bg-brand-black/50"></div>
+                <img src="IMG_9698.JPG" class="absolute inset-0 w-full h-full object-cover z-[-1] opacity-70">
+                <div class="z-10 mt-10">
+                    <h1 class="text-6xl md:text-9xl font-black tracking-tighter mb-4">大<span class="text-brand-gold">道</span>至簡</h1>
+                    <p class="text-lg md:text-2xl tracking-widest font-light text-gray-300">信仰，是一種純粹的力量。</p>
+                </div>
+                <div class="absolute bottom-10 animate-pulse text-brand-gold/50 tracking-widest text-xs">SCROLL DOWN ↓</div>
+            </section>
+
+            <section id="gallery" class="h-screen w-full relative bg-brand-black flex flex-col justify-center border-b border-white/5 overflow-hidden">
+                <h2 class="text-center text-sm md:text-base font-bold text-brand-gold mb-8 tracking-[0.3em] relative z-20">MOMENTS / 瞬間</h2>
+                <div class="relative w-full">
+                    <button id="btn-prev" onclick="slideGallery(-1)" class="hidden md:flex absolute left-[5vw] lg:left-[20vw] top-1/2 -translate-y-1/2 z-40 w-14 h-14 bg-black/60 backdrop-blur-md border border-white/20 rounded-full items-center justify-center text-white hover:text-brand-gold hover:border-brand-gold hover:scale-110 transition duration-300 opacity-0 pointer-events-none">←</button>
+                    
+                    <div id="gallery-slider" class="flex overflow-x-auto snap-x snap-mandatory gap-8 px-[10vw] md:px-[35vw] no-scrollbar scroll-smooth py-16">
+                        
+                        <div class="gallery-item snap-center shrink-0 h-[65vh] md:h-[75vh] aspect-[4/5] relative transform scale-90 opacity-40 blur-[2px]">
+                            <img src="IMG_9686.JPG" class="w-full h-full object-cover shadow-2xl">
+                        </div>
+                        
+                        <div class="gallery-item snap-center shrink-0 h-[65vh] md:h-[75vh] aspect-[4/5] relative transform scale-90 opacity-40 blur-[2px]">
+                            <img src="IMG_9688.JPG" class="w-full h-full object-cover shadow-2xl">
+                        </div>
+                        
+                        <div class="gallery-item snap-center shrink-0 h-[65vh] md:h-[75vh] aspect-[4/5] relative transform scale-90 opacity-40 blur-[2px]">
+                            <img src="IMG_9694.JPG" class="w-full h-full object-cover shadow-2xl">
+                        </div>
+
+                    </div>
+                    
+                    <button id="btn-next" onclick="slideGallery(1)" class="hidden md:flex absolute right-[5vw] lg:right-[20vw] top-1/2 -translate-y-1/2 z-40 w-14 h-14 bg-black/60 backdrop-blur-md border border-white/20 rounded-full items-center justify-center text-white hover:text-brand-gold hover:border-brand-gold hover:scale-110 transition duration-300">→</button>
+                </div>
+            </section>
+
+            <section id="events" class="h-screen w-full relative bg-brand-darkgray flex flex-col justify-center px-6 md:px-20">
+                <div class="max-w-5xl mx-auto w-full">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-end mb-10 border-b border-white/20 pb-4 gap-4">
+                        <h2 class="text-4xl md:text-5xl font-black tracking-widest">最新<span class="text-brand-gold">活動</span></h2>
+                        <button onclick="switchView('album')" class="group text-gray-400 hover:text-brand-gold tracking-widest text-sm uppercase flex items-center gap-2 transition duration-300">
+                            歷年盛典相簿 <span class="text-xl group-hover:translate-x-1 transition duration-300">→</span>
+                        </button>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="group relative bg-black p-8 border border-white/5 hover:bg-brand-gold cursor-pointer transition-all duration-500 overflow-hidden">
+                            <div class="flex flex-col md:flex-row justify-between items-start md:items-center w-full transition-all duration-500 transform group-hover:-translate-y-8 group-hover:opacity-0">
+                                <div>
+                                    <p class="text-brand-gold font-bold tracking-widest mb-1 text-sm">2026 . 04 . 15</p>
+                                    <h3 class="text-xl font-black tracking-wider text-gray-200">天上聖母聖誕千秋法會</h3>
+                                </div>
+                                <p class="mt-4 md:mt-0 text-gray-500 text-sm tracking-wider">祈安賜福，開放報名中</p>
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-y-8 group-hover:translate-y-0 transition-all duration-500">
+                                <span class="text-brand-black font-black tracking-[0.3em] text-2xl md:text-xl">了解詳情 / SEE MORE →</span>
+                            </div>
+                        </div>
+
+                        <div class="group relative bg-black p-8 border border-white/5 hover:bg-brand-gold cursor-pointer transition-all duration-500 overflow-hidden">
+                            <div class="flex flex-col md:flex-row justify-between items-start md:items-center w-full transition-all duration-500 transform group-hover:-translate-y-8 group-hover:opacity-0">
+                                <div>
+                                    <p class="text-brand-gold font-bold tracking-widest mb-1 text-sm">2026 . 05 . 01</p>
+                                    <h3 class="text-xl font-black tracking-wider text-gray-200">百年廟宇建築美學導覽</h3>
+                                </div>
+                                <p class="mt-4 md:mt-0 text-gray-500 text-sm tracking-wider">專業修復師帶領解說</p>
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-y-8 group-hover:translate-y-0 transition-all duration-500">
+                                <span class="text-brand-black font-black tracking-[0.3em] text-2xl md:text-xl">了解詳情 / SEE MORE →</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="visit" class="h-screen w-full relative bg-brand-black flex flex-col justify-between pt-32 pb-8 px-6 md:px-20 border-t border-white/5">
+                <div class="max-w-6xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-16 items-center flex-grow">
+                    <div>
+                        <h2 class="text-4xl md:text-5xl font-black tracking-widest mb-6">參拜<span class="text-brand-gold">指南</span></h2>
+                        <p class="text-gray-400 leading-relaxed tracking-wide mb-10">我們敞開大門，迎接每一位尋求平靜的靈魂。</p>
+                        <div class="space-y-6 text-sm tracking-wider">
+                            <div class="flex items-start gap-4"><span class="text-brand-gold font-black">🕒 時間</span><span class="text-gray-300">每日 08:00 - 20:00</span></div>
+                            <div class="flex items-start gap-4"><span class="text-brand-gold font-black">📍 位置</span><span class="text-gray-300">雲林縣土庫鎮雙人厝23號</span></div>
+                            <div class="flex items-start gap-4"><span class="text-brand-gold font-black">📞 聯絡</span><span class="text-gray-300">(05)6650759</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="h-64 md:h-80 border-l-4 border-brand-gold bg-brand-darkgray relative overflow-hidden group">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2374.431838128613!2d120.3716706781427!3d23.69853065214721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346eba94f940b70b%3A0x2b0b0807a1f12db5!2z5aSp6IGW5bqc!5e0!3m2!1szh-TW!2stw!4v1773906458593!5m2!1szh-TW!2stw" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="absolute inset-0 grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700">
+                        </iframe>
+                    </div>
+
+                </div>
+                <footer class="text-center w-full mt-10"><p class="text-gray-700 text-xs tracking-[0.2em]">© 2026 TEMPLE DESIGN. ALL RIGHTS RESERVED.</p></footer>
+            </section>
+
+        </div> 
+    </div>
+
+    <div id="view-album" class="hide-section h-screen overflow-y-auto pt-28 px-6 bg-brand-black fade-in relative">
+        <div class="max-w-7xl w-full mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end gap-4 md:gap-8 mb-12 border-b border-white/10 pb-6">
+                <button onclick="goBack()" class="text-gray-400 hover:text-brand-gold tracking-[0.2em] text-sm md:text-lg font-bold transition duration-300 flex items-center gap-2 md:pb-2">
+                    <span class="text-2xl">←</span> BACK
+                </button>
+                <h2 class="text-4xl md:text-6xl font-black tracking-widest text-white leading-none">歷年<span class="text-brand-gold">盛典</span></h2>
+            </div>
+            
+            <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 pb-20">
+                <div class="aspect-[4/5] w-full relative bg-brand-darkgray border-2 border-white/10 hover:border-brand-gold transition-colors duration-75 flex flex-col items-center justify-end group cursor-pointer overflow-hidden">
+                    <img src="IMG_9698.JPG" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition duration-700 z-0">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10 pointer-events-none"></div>
+                    <span class="text-gray-300 group-hover:text-brand-gold font-bold tracking-widest relative z-20 mb-8 transition duration-300 text-lg">2025 徒步遶境</span>
+                </div>
+
+                <div class="aspect-[4/5] w-full relative bg-brand-darkgray border-2 border-white/10 hover:border-brand-gold transition-colors duration-75 flex flex-col items-center justify-end group cursor-pointer overflow-hidden">
+                    <img src="IMG_9686.JPG" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition duration-700 z-0">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10 pointer-events-none"></div>
+                    <span class="text-gray-300 group-hover:text-brand-gold font-bold tracking-widest relative z-20 mb-8 transition duration-300 text-lg">2024 中元普渡</span>
+                </div>
+
+                <div class="aspect-[4/5] w-full relative bg-brand-darkgray border-2 border-white/10 hover:border-brand-gold transition-colors duration-75 flex flex-col items-center justify-end group cursor-pointer overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1590089882200-a541ab06ec38?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition duration-700 z-0">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10 pointer-events-none"></div>
+                    <span class="text-gray-300 group-hover:text-brand-gold font-bold tracking-widest relative z-20 mb-8 transition duration-300 text-lg">2023 建廟大典</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="view-history" class="hide-section h-screen overflow-y-auto pt-28 px-6 bg-brand-black fade-in relative">
+        <div class="max-w-7xl w-full mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end gap-4 md:gap-8 mb-12 border-b border-white/10 pb-6">
+                <button onclick="goBack()" class="text-gray-400 hover:text-brand-gold tracking-[0.2em] text-sm md:text-lg font-bold transition duration-300 flex items-center gap-2 md:pb-2">
+                    <span class="text-2xl">←</span> BACK
+                </button>
+                <h2 class="text-4xl md:text-6xl font-black tracking-widest text-brand-gold leading-none">歷史淵源</h2>
+            </div>
+            <div class="w-full text-gray-400 leading-relaxed tracking-wide text-lg md:text-xl">（這裡預留給你們寺廟的歷史故事...）</div>
+        </div>
+    </div>
+
+    <div id="view-gods" class="hide-section h-screen overflow-y-auto pt-28 px-6 bg-brand-darkgray fade-in relative">
+        <div class="max-w-7xl w-full mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end gap-4 md:gap-8 mb-12 border-b border-white/10 pb-6">
+                <button onclick="goBack()" class="text-gray-400 hover:text-brand-gold tracking-[0.2em] text-sm md:text-lg font-bold transition duration-300 flex items-center gap-2 md:pb-2">
+                    <span class="text-2xl">←</span> BACK
+                </button>
+                <h2 class="text-4xl md:text-6xl font-black tracking-widest text-brand-gold leading-none">眾神殿</h2>
+            </div>
+            <div class="w-full text-gray-400 leading-relaxed tracking-wide text-lg md:text-xl">（這裡預留給各個神尊的介紹...）</div>
+        </div>
+    </div>
+
+    <script>
+        const slides = ['hero', 'gallery', 'events', 'visit'];
+        let currentSlideIndex = 0;
+        let isAnimating = false;
+        const homeWrapper = document.getElementById('home-wrapper');
+        const validViews = ['home', 'album', 'history', 'gods'];
+
+        function renderView(targetView) {
+            document.getElementById('view-home').classList.add('hide-section');
+            document.getElementById('view-album').classList.add('hide-section');
+            document.getElementById('view-history').classList.add('hide-section');
+            document.getElementById('view-gods').classList.add('hide-section');
+            const target = document.getElementById('view-' + targetView);
+            target.classList.remove('hide-section');
+            if (targetView !== 'home') target.scrollTo(0, 0);
+        }
+
+        window.addEventListener('popstate', (e) => {
+            const targetView = e.state ? e.state.view : 'home';
+            renderView(targetView);
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            let view = urlParams.get('view') || 'home';
+            if (!validViews.includes(view)) view = 'home';
+            window.history.replaceState({ view: view }, '', window.location.search || window.location.pathname);
+            renderView(view);
+            updateGalleryState(); // 初始化按鈕與 3D 景深
+        });
+
+        function switchView(targetView) {
+            if (targetView === 'home') {
+                window.history.pushState({ view: 'home' }, '', window.location.pathname);
+            } else {
+                window.history.pushState({ view: targetView }, '', '?view=' + targetView);
+            }
+            renderView(targetView);
+        }
+
+        function goBack() { switchView('home'); }
+
+        function updateSlidePosition() {
+            isAnimating = true;
+            if (window.innerWidth >= 768) {
+                homeWrapper.style.transform = `translateY(-${currentSlideIndex * 100}vh)`;
+            } else {
+                const target = document.getElementById(slides[currentSlideIndex]);
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+            setTimeout(() => { isAnimating = false; }, 800);
+        }
+
+        function goToSection(sectionId) {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('view') && urlParams.get('view') !== 'home') {
+                switchView('home');
+            }
+            setTimeout(() => {
+                const targetIndex = slides.indexOf(sectionId);
+                if(targetIndex !== -1) {
+                    currentSlideIndex = targetIndex;
+                    updateSlidePosition();
+                }
+            }, 50);
+        }
+
+        const homeView = document.getElementById('view-home');
+        homeView.addEventListener('wheel', function(e) {
+            if (window.innerWidth < 768 || isAnimating) return;
+            if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+            e.preventDefault();
+            if (e.deltaY > 0 && currentSlideIndex < slides.length - 1) {
+                currentSlideIndex++; updateSlidePosition();
+            } else if (e.deltaY < 0 && currentSlideIndex > 0) {
+                currentSlideIndex--; updateSlidePosition();
+            }
+        }, { passive: false });
+
+        // --- 全新雷達定位：畫廊按鈕 + 3D 景深精準判定 ---
+        const gallerySlider = document.getElementById('gallery-slider');
+        const btnPrev = document.getElementById('btn-prev');
+        const btnNext = document.getElementById('btn-next');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        function updateGalleryState() {
+            if (!gallerySlider) return;
+
+            // 1. 更新左右按鈕防呆
+            if (btnPrev && btnNext) {
+                if (gallerySlider.scrollLeft <= 5) {
+                    btnPrev.style.opacity = '0'; btnPrev.style.pointerEvents = 'none';
+                } else {
+                    btnPrev.style.opacity = '1'; btnPrev.style.pointerEvents = 'auto';
+                }
+                if (gallerySlider.scrollLeft + gallerySlider.clientWidth >= gallerySlider.scrollWidth - 5) {
+                    btnNext.style.opacity = '0'; btnNext.style.pointerEvents = 'none';
+                } else {
+                    btnNext.style.opacity = '1'; btnNext.style.pointerEvents = 'auto';
+                }
+            }
+
+            // 2. 更新精準 3D 景深 (雷達定位法)
+            const containerCenter = window.innerWidth / 2;
+            galleryItems.forEach(item => {
+                const rect = item.getBoundingClientRect();
+                const itemCenter = rect.left + rect.width / 2;
+                // 計算照片中心點與螢幕中心點的距離
+                const distance = Math.abs(containerCenter - itemCenter);
+                
+                // 如果照片被擠到了正中間 (距離極小)
+                if (distance < rect.width / 2) {
+                    // 解除背景模糊、縮小，加上 scale-110 霸氣放大，並拉到最上層
+                    item.classList.remove('scale-90', 'opacity-40', 'blur-[2px]');
+                    item.classList.add('scale-110', 'opacity-100', 'blur-0', 'z-10');
+                } else {
+                    // 如果被擠到旁邊，恢復成縮小與模糊的狀態
+                    item.classList.add('scale-90', 'opacity-40', 'blur-[2px]');
+                    item.classList.remove('scale-110', 'opacity-100', 'blur-0', 'z-10');
+                }
+            });
+        }
+
+        function slideGallery(direction) {
+            const itemWidth = gallerySlider.querySelector('.gallery-item').offsetWidth;
+            const scrollAmount = itemWidth + 32; 
+            gallerySlider.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+        }
+        
+        // 綁定滾動事件，讓雷達無時無刻都在掃描！
+        gallerySlider.addEventListener('scroll', updateGalleryState);
+        window.addEventListener('resize', updateGalleryState);
+
+    </script>
+</body>
+</html>
