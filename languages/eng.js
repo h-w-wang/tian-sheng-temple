@@ -3,18 +3,28 @@ window.dictEN = {
     nav_menu_label: "NAVIGATION",
     nav_home: "HOME", nav_gallery: "GALLERY", nav_events: "EVENTS", nav_visit: "VISIT US", nav_history: "OUR HISTORY", nav_gods: "DEITIES",
     nav_about: "ABOUT US",
-    hero_title: "PURE <span class='text-brand-gold'>FAITH</span>", hero_sub: "Belief is the ultimate force.",
+    
+    hero_title: "", 
+    hero_sub: "All beings rely on <span class='text-brand-gold'>Baosheng</span><br><span class='text-brand-gold'>Baosheng</span> delivers all beings",
+    
     gallery_title: "MOMENTS", events_title: "UPCOMING <span class='text-brand-gold'>EVENTS</span>", events_album_btn: "HISTORIC ALBUMS",
     event1_title: "Mazu's Birthday Blessing Ceremony", event1_desc: "Registration is now open.", event2_title: "Centennial Temple Architecture Tour", event2_desc: "Guided by professional restorers.",
     btn_see_more: "SEE MORE →", btn_guide_map: "PARKING & ROUTE MAP",
     visit_title: "VISIT <span class='text-brand-gold'>US</span>", visit_desc: "Our doors are open to every soul seeking peace.",
-    info_time: "🕒 OPEN", info_loc: "📍 LOC", info_tel: "📞 TEL", 
+    info_time: "🕒 OPEN", info_time1: "08:00-20:00 daily", info_loc: "📍 LOC", info_loc1: "No. 23, Shuangrencuo, Tuku Township, Yunlin County 633103", info_tel: "📞 TEL", 
     page_album_title: "HISTORIC <span class='text-brand-gold'>ALBUMS</span>", album1_title: "2026 Pilgrimage",
+    
     page_history_title: "OUR HISTORY", 
     history_year_label: "ESTABLISHED: ", history_year_value: "1979", history_desc_label: "HISTORY: ",
-    history_p1: "In the beginning, Baosheng Dadi lacked a permanent shrine and assisted devotees by visiting other public temples. In 1986, the deity instructed that His statue should reside at the home of medium Wang Tian-song in Houpu Village. The medium was sent to the Minxiong Baosheng Dadi Temple to bring back the statue. Initially hesitant due to the lack of precedent for branching out a deity statue in their 200-year history, the temple officials eventually agreed after seeking divine confirmation. The statue was welcomed in November 1986, and the shrine was named Zhentian Palace.",
-    history_p2: "In 2000, as the original site became insufficient, Mr. Wang Tian-song donated 200 ping of land for a temporary tin-roofed structure. The relocation occurred in the sixth lunar month, and the temple was officially renamed Tiansheng Palace by divine decree.",
-    history_p3: "On the 24th day of the 11th lunar month in 2008, the deity was formally enshrined in the new temple.",
+
+    history_p1: "The divine inspiration is profound and mysterious. Amidst the vast universe that nurtures all things and their vital energies, tales of divine manifestations are often heard.",
+    history_p2: "In 1979, Baosheng Dadi, who formerly served as an Imperial Censor, received a divine decree from the Jade Emperor to patrol the world on behalf of Heaven. He was tasked with observing all directions, rewarding good and punishing evil, eradicating violence and bringing peace, protecting the people and the nation. Manifesting spontaneously, He received orders to descend upon Houpu Village to save the world and deliver the multitudes. Initially, due to the lack of a permanent location and a designated medium, He could only attach His spirit to public temple palanquins to serve the devotees. This continued until a medium was found and they collaborated for a period. In 1986, Dadi indicated that His divine statue should be enshrined at the residence of the medium, Mr. Wang Tian-song. He instructed the medium to go to the Minxiong Baosheng Dadi Temple to welcome back a divine statue. However, the temple officials stated that in the temple's over 200-year history, there was no precedent for a statue branching out (Fenling), and they dared not make an unauthorized decision. After seeking divine guidance through casting divination blocks (Zhibei), the temple officials agreed. On the 11th day of the 11th lunar month in 1986, the divine statue was welcomed back and enshrined, setting the record for the first branching out of a statue from that temple, and the shrine was named Zhentian Palace. Shengren Baosheng Dadi is proficient in astronomy, geography, rituals, music, and medicine. He practices medicine to save the world, His divine power is widely known, He blesses all living beings, the incense burns prosperously, and devotees come in an endless stream.",
+    history_p3: "On the 29th day of the 6th lunar month in 1990, because Dadi drove away plagues, purged evil auras, protected the villagers, and brought peace to the entire region; and because His disciples, Mr. Wang Tian-song and Mr. Huang Chao, maintained their integrity and promoted Dadi's spirit of salvation, assisting Dadi in serving devotees for 30 years without ever accepting a single cent—a virtue beyond measure—the Jade Emperor elevated His title to 'Shengren Baosheng Dadi' (Holy and Benevolent Baosheng Dadi).",
+    history_p4: "In 1987, Miaolian Guanyin Buddha from Wusheng Temple in Pengcheng Village, Chaozhou, Pingtung, appeared in a dream to the medium, expressing her desire to come to Zhentian Palace to assist Dadi in saving all beings. After visiting the temple and explaining the dream, asking to bring the statue back for enshrinement, the temple officials hesitated as the statue was public property of the temple and they dared not decide alone. After mutual consultation and seeking divine guidance via casting divination blocks, Guanyin Buddha's statue was temporarily borrowed for worship. Later, a new statue was carved and formally enshrined.",
+    history_p5: "In 2000, because the original site was no longer sufficient, Mr. Wang Tian-song donated 200 ping of land located at No. 23 Shuangrencuo. A tin-roofed structure was built, and on the 1st day of the 6th lunar month, the divine palanquin relocated to this temporary palace. By divine decree, it was renamed Tiansheng Temple (Tianshengfu).",
+    history_p6: "On June 23rd, the Tiansheng Temple Construction Committee was officially established. Under the active planning of Chairman Chen Zhen-sheng, the temple construction began. Groundbreaking took place in the first lunar month of 2007, and the formal enshrinement ceremony was successfully held at 5:00 AM on the 24th day of the 11th lunar month in 2008. The temple features traditional Minnan-style architecture, covering 90 ping. It is antique, structurally sound, majestic, and magnificent. The central shrine is dedicated to Shengren Baosheng Dadi; the left sub-shrine to Guanyin Buddha; and the right sub-shrine to the Martial God of Wealth, Mo Fu Qian Sui, and General Yellow Tiger.",
+    history_p7: "It is widely known in the world that humans find peace through the divine, and the divine manifests through human devotion. With a righteous deity presiding over the area, all evil spirits dare not invade, disasters turn into blessings, and danger turns into safety. Truly remarkable is Dadi's divine power; devotees are greatly blessed and protected from disasters and tribulations, making Him truly worthy of the title True Man (Zhenren).",
+    history_p8: "We express our deepest gratitude for the pious contributions from devotees everywhere toward the temple's construction funds. The Committee hereby extends its sincere thanks.",
     page_gods_title: "THE DEITIES",
     god_main_label: "MAIN DEITY", god_main_name: "Shengren Baosheng Dadi", god_main_desc: "Description.",
     god_other_label: "OTHER DEITIES", god_other1_name: "Grand Marshal Huanghu", god_other2_name: "Miaolian Guanyin Buddha", god_other3_name: "Martial God of Wealth & Mo Fu Qian Sui",
@@ -22,9 +32,6 @@ window.dictEN = {
     map_step1_title: "PARKING INFO", map_step1_desc: "An exclusive parking lot for worshippers is located in front of the temple, accommodating about 3 cars. ",
     map_step2_title: "WORSHIP ROUTE", map_step2_desc: "Please enter through the Dragon Gate (right) and exit through the Tiger Gate (left). The worship sequence is: Tiangong Censer → Main Deity Baosheng Dadi → Dragon Side(right) Deities Miaolian Guanyin Buddha → Tiger Side(left) Deities Martial God of Wealth & Mo Fu Qian Sui.",
     map_step3_title: "ACCESSIBILITY", map_step3_desc: "The temple is equipped with accessible ramps and restrooms. If you need wheelchair assistance, please feel free to ask our staff.",
-    event1_detail_title: "2026 PILGRIMAGE",
-    event1_detail_desc: "The event is scheduled for April 26, 2026, at the following location: Tianshengfu -> Minxiong Xi'an Baosheng Dadi Temple.",
-    god1_detail_p1: "Detailed historical origins would be written here.",
-    god2_detail_p1: "Detailed historical origins would be written here.",
-    god3_detail_p1: "Detailed historical origins would be written here."
+    event1_detail_title: "2026 PILGRIMAGE", event1_detail_desc: "The event is scheduled for April 26, 2026(Sun), and scheduled to meet at 6:45AM and depart at 7:00 AM",
+    god1_detail_p1: "Detailed historical origins.", god2_detail_p1: "Detailed historical origins.", god3_detail_p1: "Detailed historical origins."
 };

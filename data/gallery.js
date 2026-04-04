@@ -62,4 +62,31 @@ class GalleryController {
         const scrollAmount = this.items[0].offsetWidth + gap; 
         this.slider.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
     }
+    updateButtons() {
+        if (!this.slider || !this.btnPrev || !this.btnNext) return;
+
+        // 計算是否在最左邊 (加上 5px 的容錯率，避免小數點運算誤差)
+        const isAtStart = this.slider.scrollLeft <= 5;
+        
+        // 計算是否在最右邊：目前捲出的隱藏距離 + 容器本身的寬度 >= 內容的總寬度
+        const isAtEnd = this.slider.scrollLeft + this.slider.clientWidth >= this.slider.scrollWidth - 5;
+
+        // 控制左邊按鈕 (btn-prev)
+        if (isAtStart) {
+            // 如果在最左邊，加上隱藏標籤
+            this.btnPrev.classList.add('opacity-0', 'pointer-events-none');
+        } else {
+            // 如果不在最左邊，拔掉隱藏標籤，讓它顯示
+            this.btnPrev.classList.remove('opacity-0', 'pointer-events-none');
+        }
+
+        // 控制右邊按鈕 (btn-next)
+        if (isAtEnd) {
+            // 如果到底了，加上隱藏標籤
+            this.btnNext.classList.add('opacity-0', 'pointer-events-none');
+        } else {
+            // 如果還沒到底，拔掉隱藏標籤
+            this.btnNext.classList.remove('opacity-0', 'pointer-events-none');
+        }
+    }
 }
