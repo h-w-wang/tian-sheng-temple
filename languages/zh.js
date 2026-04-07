@@ -1,18 +1,18 @@
 window.dictZH = {
     nav_logo: "天聖府.",
     nav_menu_label: "首頁導覽",
-    nav_home: "主畫面", nav_gallery: "精彩瞬間", nav_events: "最新活動", nav_visit: "參拜指南", nav_history: "歷史沿革", nav_gods: "眾神殿",
+    nav_home: "主畫面", nav_gallery: "相關照片", nav_events: "最新活動", nav_visit: "參拜指南", nav_history: "歷史沿革", nav_gods: "眾神殿",
     nav_about: "關於我們",
     
     hero_title: "", 
-    hero_sub: "眾不<span class='text-brand-gold'>保生</span> 生要眾<br><span class='text-brand-gold'>保生</span>渡眾 眾多生",
+    hero_sub: "眾不保生 <span class='text-brand-gold'>生</span>要眾<br><span class='text-brand-gold'>保生</span>渡眾 眾多生",
     
     gallery_title: "MOMENTS / 瞬間", events_title: "最新<span class='text-brand-gold'>活動</span>", events_album_btn: "歷年盛典相簿",
     event1_title: "聖仁保生大帝進香", event1_desc: "祈安賜福，開放報名中", event2_title: "百年廟宇建築美學導覽", event2_desc: "",
     btn_see_more: "了解詳情 / SEE MORE →", btn_guide_map: "停車與參拜動線圖",
     visit_title: "參拜<span class='text-brand-gold'>指南</span>", visit_desc: "我們敞開大門，迎接每一位尋求平靜的靈魂。",
     info_time: "🕒 時間", info_time1: "每日08:00-20:00", info_loc: "📍 位置", info_loc1: "雲林縣土庫鎮後埔里雙人厝23號", info_tel: "📞 電話", 
-    page_album_title: "歷年<span class='text-brand-gold'>盛典</span>", album1_title: "2026 徒步遶境",
+    page_album_title: "歷年<span class='text-brand-gold'>盛典</span>", album1_title: "2026 進香", album2_title:"2024 祭天台",
     
     page_history_title: "歷史沿革", 
     history_year_label: "創立起始年：", history_year_value: "1979", history_desc_label: "建立沿革：",
@@ -26,12 +26,12 @@ window.dictZH = {
     history_p7: "蓋聞世上，人以神安，神因人而顯，地方有正神坐鎮其間，百魔不敢侵犯、遇難呈祥、逢凶亦能化吉，是所共知，卓哉大帝造化通神，信徒大蒙賜福庇佑，消災化劫，不愧真人。",
     history_p8: "本廟建廟工程經費，承蒙各地善信大德虔誠奉獻，本委員會藉此致申謝忱。",
     page_gods_title: "眾神殿",
-    god_main_label: "主祀神明", god_main_name: "聖仁保生大帝", god_main_desc: "介紹文。",
+    god_main_label: "主祀神明", god_main_name: "聖仁保生大帝", god_main_desc: "出生於隋朝，本名顏鴻明，生前任職上海節度使。民國七十七年五月二十日起敬天公三日後，由保生大帝接天令旗救苦萬民，消除惡魔。後於民國七十九年農曆六月廿九日因功德無量且爐下眾弟子德行操守救苦無數，因此連升三級從此為「聖仁保生大帝」。其功德有三 : (一)本里雙人厝曾有一田地誰買到誰家中就會失丁，地主知道保生大帝救世無數特來請示。保生大帝居中協調，雙方同意在本里興建<br>「元帥公廟」從此相安無事，功德無量。(二)本里百年前有女性葬的墓，因得到日月精華成為了女惡靈，在本里興風作浪。本里鉅天宮池府千歲曾多次要抓祂，但都被脫逃。適逢保生大帝前來結緣，在救世過程中常常受到干擾，經過精心設計，在鉅天宮池府千歲聖誕當夜，保生大帝配合鉅天宮眾神以「請君入甕」之計順利捉拿女惡靈，造福鄉里，救世萬民。(三)保生大帝神威顯赫，救難救苦，乩身及爐下眾弟子從未收紅包也沒有接受任何好處招待。<br>以上功德、操守感動上天。此「聖仁」頭銜得來不易。",
     god_other_label: "配祀神明", god_other1_name: "黃虎大元帥", god_other2_name: "妙蓮觀音佛祖", god_other3_name: "武財神及莫府千歲",
     page_map_title: "參拜與停車指引",
     map_step1_title: "停車資訊", map_step1_desc: "廟埕前方設有專屬香客停車場，可容納<span class='whitespace-nowrap'>約 3 輛小型車</span>。",
     map_step2_title: "參拜動線", map_step2_desc: "入廟請由「龍門（右側）」進、「虎門（左側）」出。<br><br>參拜順序依次為：<span class='whitespace-nowrap'>天公爐</span> → <span class='whitespace-nowrap'>主祀聖仁保生大帝</span> → <span class='whitespace-nowrap'>龍邊配祀妙蓮觀音佛祖</span> → <span class='whitespace-nowrap'>虎邊配祀莫府千歲與武財神</span>。",
     map_step3_title: "無障礙設施", map_step3_desc: "本府設有完善之無障礙坡道與洗手間，<span class='whitespace-nowrap'>如有輪椅或特殊需求</span>，<span class='whitespace-nowrap'>歡迎隨時向廟方人員尋求協助</span>。",
     event1_detail_title: "2026進香", event1_detail_desc: "預計舉行於國歷2026.04.26(日)，農曆三月初十，地點 : 天聖府 -> 民雄西安保生大帝廟。<br>集合時間:早上6:45,出發時間:早上7:00",
-    god1_detail_p1: "這裡會放介紹。", god2_detail_p1: "這裡會放介紹。", god3_detail_p1: "這裡會放介紹。"
+    god1_detail_p1: "民國76年農曆十月十九日，本里雙人厝黃虎元帥於此日開光，正式加入本府救苦。", god2_detail_p1: "民國76年農曆十月十九日，來自屏東縣潮州劉厝里武聖宮觀音佛祖於此日開光，正式加入本府救苦。本府觀音佛祖曾用甘露水治好無數凶宅惡靈、精神異常之病患，因此於民國103年接令被玉皇大帝敕封「妙蓮觀音佛祖」頭銜。", god3_detail_p1: "民國85年間聖仁保生大帝指示要順利建廟，需供奉北港新街武德宮五路財神武財神，故迎回武財神加入本府。"
 };
