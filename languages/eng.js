@@ -11,7 +11,7 @@ window.dictEN = {
     event1_title: "Mazu's Birthday Blessing Ceremony", event1_desc: "Registration is now open.", event2_title: "Centennial Temple Architecture Tour", event2_desc: "Guided by professional restorers.",
     btn_see_more: "SEE MORE →", btn_guide_map: "PARKING & ROUTE MAP",
     visit_title: "VISIT <span class='text-brand-gold'>US</span>", visit_desc: "Our doors are open to every soul seeking peace.",
-    info_time: "🕒 OPEN", info_time1: "08:00-20:00 daily", info_loc: "📍 LOC", info_loc1: "No. 23, Shuangrencuo, Tuku Township, Yunlin County 633103", info_tel: "📞 TEL", 
+    info_time: "🕒 OPEN", info_time1: "08:00-20:00 daily", info_loc: "📍 LOC", info_loc1: "No. 23, Shuangrencuo, Tuku Township, Yunlin County", info_tel: "📞 TEL", 
     page_album_title: "HISTORIC <span class='text-brand-gold'>ALBUMS</span>", album1_title: "2026 Pilgrimage",
     
     page_history_title: "OUR HISTORY", 

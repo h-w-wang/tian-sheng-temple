@@ -117,7 +117,7 @@
 
             <section id="hero" class="h-screen w-full relative flex flex-col justify-center items-center text-center px-4">
                 <div class="absolute inset-0 z-0 bg-brand-black/50"></div>
-                <img src="source/IMG_0311.JPG" class="absolute inset-0 w-full h-full object-cover z-[-1] opacity-70">
+                <img src="https://res.cloudinary.com/dk0xndkvr/image/upload/v1775643839/IMG_0311_amgb7x.webp" class="absolute inset-0 w-full h-full object-cover z-[-1] opacity-70">
                 <div class="relative z-20 flex flex-col items-center justify-center h-full text-center px-4">
                 <h1 data-i18n="hero_title" class="hidden"></h1>
                 <p data-i18n="hero_sub" 
@@ -135,16 +135,16 @@
                     
                     <div id="gallery-slider" class="flex overflow-x-auto snap-x snap-mandatory gap-4 md:gap-8 no-scrollbar scroll-smooth py-16">
                         <div class="gallery-item snap-center shrink-0 h-[50vh] md:h-[65vh] aspect-[4/5] relative transform cursor-pointer transition-all duration-500">
-                            <img src="source/IMG_0315.JPG" class="w-full h-full object-cover shadow-2xl">
+                            <img src="https://res.cloudinary.com/dk0xndkvr/image/upload/v1775639138/xmoitnwmvsmjo5kkszmc.webp" class="w-full h-full object-cover shadow-2xl">
                         </div>
                         <div class="gallery-item snap-center shrink-0 h-[50vh] md:h-[65vh] aspect-[4/5] relative transform cursor-pointer transition-all duration-500">
-                            <img src="source/IMG_0319.JPG" class="w-full h-full object-cover shadow-2xl">
+                            <img src="https://res.cloudinary.com/dk0xndkvr/image/upload/v1775639140/arasdomeanle3zfw94li.webp" class="w-full h-full object-cover shadow-2xl">
                         </div>
                         <div class="gallery-item snap-center shrink-0 h-[50vh] md:h-[65vh] aspect-[4/5] relative transform cursor-pointer transition-all duration-500">
-                            <img src="source/IMG_0320.JPG" class="w-full h-full object-cover shadow-2xl">
+                            <img src="https://res.cloudinary.com/dk0xndkvr/image/upload/v1775639143/i96xxtwpzvw29ol8iqqo.webp" class="w-full h-full object-cover shadow-2xl">
                         </div>
                         <div class="gallery-item snap-center shrink-0 h-[50vh] md:h-[65vh] aspect-[4/5] relative transform cursor-pointer transition-all duration-500">
-                            <img src="source/IMG_0336.JPG" class="w-full h-full object-cover shadow-2xl">
+                            <img src="https://res.cloudinary.com/dk0xndkvr/image/upload/v1775639148/s5fssmrhhqgass0u6d7f.webp" class="w-full h-full object-cover shadow-2xl">
                         </div>
                         <div class="gallery-item snap-center shrink-0 h-[50vh] md:h-[65vh] aspect-[4/5] relative transform cursor-pointer transition-all duration-500">
                             <img src="source/2026-4-4_17.00_1.JPG" class="w-full h-full object-cover shadow-2xl">
@@ -207,31 +207,33 @@
                         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d456.6721712711506!2d120.36999823479276!3d23.698214287088554!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346eba94f940b70b%3A0x2b0b0807a1f12db5!2z5aSp6IGW5bqc!5e0!3m2!1szh-TW!2stw!4v1773938832632!5m2!1szh-TW!2stw" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="absolute inset-0 grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700"></iframe>
                     </div>
                 </div>
-                <footer class="text-center w-full mt-10"><p class="text-gray-700 text-xs tracking-[0.2em]">© 2026 TIANSHENG TEMPLE. ALL RIGHTS RESERVED.</p></footer>
+                <footer class="text-center w-full mt-10"><p class="text-xs tracking-[0.2em]">© 2026 TIANSHENG TEMPLE. ALL RIGHTS RESERVED.</p></footer>
             </section>
         </div> 
     </div>
 
     <div id="view-album" class="hide-section h-screen overflow-y-auto pt-28 px-6 bg-brand-black fade-in relative">
-        <div class="max-w-7xl w-full mx-auto">
+        <div class="max-w-7xl w-full mx-auto pb-32">
             <div class="flex flex-col md:flex-row md:items-end gap-4 md:gap-8 mb-12 border-b border-white/10 pb-6">
                 <button onclick="appRouter.goBack()" class="text-gray-400 hover:text-brand-gold tracking-[0.2em] text-sm md:text-lg font-bold transition duration-300 flex items-center gap-2 md:pb-2"><span class="text-2xl">←</span> BACK</button>
                 <h2 class="text-4xl md:text-6xl font-black tracking-widest text-white leading-none" data-i18n="page_album_title">歷年<span class="text-brand-gold">盛典</span></h2>
             </div>
-            <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 pb-20">
-                <div class="aspect-[4/5] w-full relative bg-brand-darkgray border-2 border-white/10 hover:border-brand-gold transition-colors duration-75 flex flex-col items-center justify-end group cursor-pointer overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1605658189674-609138e658e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition duration-700 z-0">
+            
+            <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                
+                <div onclick="appRouter.switchView('event1')" class="aspect-[4/5] w-full relative bg-brand-darkgray border-2 border-white/10 hover:border-brand-gold transition-colors duration-300 flex flex-col items-center justify-end group cursor-pointer overflow-hidden">
+                    <img src="source/IMG_0311.JPG" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition duration-700 z-0">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10 pointer-events-none"></div>
                     <span class="text-gray-300 group-hover:text-brand-gold font-bold tracking-widest relative z-20 mb-8 transition duration-300 text-lg" data-i18n="album1_title">2026 進香</span>
                 </div>
-            </div>
-            <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 pb-20">
-                <div class="aspect-[4/5] w-full relative bg-brand-darkgray border-2 border-white/10 hover:border-brand-gold transition-colors duration-75 flex flex-col items-center justify-end group cursor-pointer overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1605658189674-609138e658e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition duration-700 z-0">
+
+                <div class="aspect-[4/5] w-full relative bg-brand-darkgray border-2 border-white/10 hover:border-brand-gold transition-colors duration-300 flex flex-col items-center justify-end group cursor-pointer overflow-hidden">
+                    <img src="source/IMG_0315.JPG" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition duration-700 z-0">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10 pointer-events-none"></div>
                     <span class="text-gray-300 group-hover:text-brand-gold font-bold tracking-widest relative z-20 mb-8 transition duration-300 text-lg" data-i18n="album2_title">2024 祭天台</span>
                 </div>
-            </div>
+
+                </div>
         </div>
     </div>
 
@@ -242,22 +244,25 @@
                 <h2 class="text-4xl md:text-6xl font-black tracking-widest text-brand-gold leading-none" data-i18n="page_history_title">歷史沿革</h2>
             </div>
             <div class="w-full max-w-5xl text-gray-400 leading-loose tracking-wider text-lg">
-                <div class="grid grid-cols-1 md:grid-cols-[max-content_1fr] gap-y-8 md:gap-x-3">
-                    <div class="text-brand-gold font-bold tracking-[0.2em]" data-i18n="history_year_label">創立起始年：</div>
-                    <div class="text-white font-black" data-i18n="history_year_value">民國68年</div>
-                    <div class="text-brand-gold font-bold tracking-[0.2em]" data-i18n="history_desc_label">建立沿革：</div>
-                    <div class="space-y-6 text-justify">
-                        <p data-i18n="history_p1">保生大帝初時因無固定場所...</p>
-                        <p data-i18n="history_p2">民國89年因原地不敷使用...</p>
-                        <p data-i18n="history_p3">民國97年農曆11月24日入火安座。</p>
-                        <p data-i18n="history_p4">民國97年農曆11月24日入火安座。</p>
-                        <p data-i18n="history_p5">民國97年農曆11月24日入火安座。</p>
-                        <p data-i18n="history_p6">民國97年農曆11月24日入火安座。</p>
-                        <p data-i18n="history_p7">民國97年農曆11月24日入火安座。</p>
-                        <p data-i18n="history_p8">民國97年農曆11月24日入火安座。</p>
-                    </div>
-                </div>
+        <div class="grid grid-cols-1 md:grid-cols-[max-content_1fr] gap-y-8 md:gap-x-3">
+            
+            <div class="text-brand-gold font-bold tracking-[0.2em]" data-i18n="history_year_label">創立起始年：</div>
+            <div class="text-white font-black" data-i18n="history_year_value">民國68年</div>
+
+            <div class="text-brand-gold font-bold tracking-[0.2em]" data-i18n="history_desc_label">建立沿革：</div>
+            <div class="space-y-6 text-justify">
+                <p data-i18n="history_p1">保生大帝初時因無固定場所...</p>
+                <p data-i18n="history_p2">民國89年因原地不敷使用...</p>
+                <p data-i18n="history_p3">民國97年農曆11月24日入火安座。</p>
+                <p data-i18n="history_p4">民國97年農曆11月24日入火安座。</p>
+                <p data-i18n="history_p5">民國97年農曆11月24日入火安座。</p>
+                <p data-i18n="history_p6">民國97年農曆11月24日入火安座。</p>
+                <p data-i18n="history_p7">民國97年農曆11月24日入火安座。</p>
+                <p data-i18n="history_p8">民國97年農曆11月24日入火安座。</p>
             </div>
+            
+        </div>
+    </div>
         </div>
     </div>
 
