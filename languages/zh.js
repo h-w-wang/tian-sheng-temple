@@ -12,7 +12,7 @@ window.dictZH = {
     btn_see_more: "了解詳情 / SEE MORE →", btn_guide_map: "停車與參拜動線圖",
     visit_title: "參拜<span class='text-brand-gold'>指南</span>", visit_desc: "我們敞開大門，迎接每一位尋求平靜的靈魂。",
     info_time: "🕒 時間", info_time1: "每日08:00-20:00", info_loc: "📍 位置", info_loc1: "雲林縣土庫鎮後埔里雙人厝23號", info_tel: "📞 電話", 
-    page_album_title: "歷年<span class='text-brand-gold'>盛典</span>", album1_title: "2026 進香", album2_title:"2024 祭天台",
+    page_album_title: "歷年<span class='text-brand-gold'>盛典</span>", album1_title: "2019 進香", album2_title:"2024 祭天台",
     
     page_history_title: "歷史沿革", 
     history_year_label: "創立起始年：", history_year_value: "民國68年", history_desc_label: "建立沿革：",

@@ -12,7 +12,7 @@ window.dictEN = {
     btn_see_more: "SEE MORE →", btn_guide_map: "PARKING & ROUTE MAP",
     visit_title: "VISIT <span class='text-brand-gold'>US</span>", visit_desc: "Our doors are open to every soul seeking peace.",
     info_time: "🕒 OPEN", info_time1: "08:00-20:00 daily", info_loc: "📍 LOC", info_loc1: "No. 23, Shuangrencuo, Tuku Township, Yunlin County", info_tel: "📞 TEL", 
-    page_album_title: "HISTORIC <span class='text-brand-gold'>ALBUMS</span>", album1_title: "2026 Pilgrimage",
+    page_album_title: "HISTORIC <span class='text-brand-gold'>ALBUMS</span>", album1_title: "2019 Pilgrimage",
     
     page_history_title: "OUR HISTORY", 
     history_year_label: "ESTABLISHED: ", history_year_value: "1979", history_desc_label: "HISTORY: ",
