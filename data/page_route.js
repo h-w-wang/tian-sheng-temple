@@ -1,36 +1,31 @@
+// data/page_route.js
+
 class Router {
     constructor() {
-        this.validViews = ['home', 'album', 'history', 'gods', 'map', 'event1', 'god1', 'god2', 'god3'];
-        this.scrollMemory = {};
+        // 🚨 修正：加入所有正確的房間 ID 到名單中
+        this.validViews = ['home', 'album', 'history', 'gods', 'map', 'event1', 'god1', 'god2', 'god3', 'album2019', 'album2024'];
         this.currentActiveView = 'home';
+        this.scrollMemory = {};
         this.slides = ['hero', 'gallery', 'events', 'visit'];
         this.currentSlideIndex = 0;
         this.isAnimating = false;
-        
-        // 【新增核心】：建立一個陣列當作記憶堆疊，記住你走過的每一頁
-        this.historyStack = [];
         
         this.setupWheelScroll();
         this.setupPopState();
     }
 
     renderView(targetView) {
-        const currentEl = document.getElementById('view-' + this.currentActiveView);
-        if (currentEl) this.scrollMemory[this.currentActiveView] = currentEl.scrollTop;
-
+        // 隱藏所有房間
         this.validViews.forEach(id => {
             const el = document.getElementById('view-' + id);
             if(el) el.classList.add('hide-section');
         });
         
+        // 顯示目標房間
         const target = document.getElementById('view-' + targetView);
         if (target) {
             target.classList.remove('hide-section');
-            setTimeout(() => {
-                const detailPages = ['event1', 'god1', 'god2', 'god3'];
-                if (detailPages.includes(targetView)) target.scrollTo(0, 0); 
-                else target.scrollTo({ top: this.scrollMemory[targetView] || 0, behavior: 'instant' }); 
-            }, 10);
+            window.scrollTo(0, 0); 
         }
 
         this.currentActiveView = targetView;
@@ -39,41 +34,32 @@ class Router {
         }
     }
 
+    // 💡 關鍵：這是讓 Alt + 方向鍵生效的核心
     switchView(targetView) {
-        if (targetView === this.currentActiveView) return; // 避免同頁面重複推入
-        
-        // 【新增】：在前往下一頁之前，把「現在這一頁」塞進歷史紀錄堆疊裡
-        this.historyStack.push(this.currentActiveView);
+        if (targetView === this.currentActiveView) return;
 
-        if (targetView === 'home') window.history.pushState({ view: 'home' }, '', window.location.pathname);
-        else window.history.pushState({ view: targetView }, '', '?view=' + targetView);
+        // 推送到瀏覽器歷史紀錄
+        const state = { view: targetView };
+        const url = targetView === 'home' ? window.location.pathname : '?view=' + targetView;
+        window.history.pushState(state, '', url);
         
         this.renderView(targetView);
     }
 
-    // 【重構】：讓它具備真正的「返回上一頁」智慧
+    // 💡 讓 BACK 按鈕遵循瀏覽器歷史
     goBack() {
-        if (this.historyStack.length > 0) {
-            // 從記憶堆疊裡拿出最後走過的那一頁
-            const prevView = this.historyStack.pop();
-            
-            // 更新網址列
-            if (prevView === 'home') {
-                window.history.pushState({ view: 'home' }, '', window.location.pathname);
-            } else {
-                window.history.pushState({ view: prevView }, '', '?view=' + prevView);
-            }
-            
-            this.renderView(prevView);
-        } else {
-            // 如果沒有紀錄（例如信眾一打開網站就直接貼上子頁面網址），退無可退時才預設回首頁
-            if (this.currentActiveView !== 'home') {
-                window.history.pushState({ view: 'home' }, '', window.location.pathname);
-                this.renderView('home');
-            }
-        }
+        window.history.back();
     }
 
+    setupPopState() {
+        // 當使用者按 Alt + ← 或瀏覽器後退時觸發
+        window.addEventListener('popstate', (e) => {
+            const targetView = (e.state && e.state.view) ? e.state.view : 'home';
+            this.renderView(targetView);
+        });
+    }
+
+    // 剩下的 goToSection, updateVerticalSlide, setupWheelScroll 維持不變...
     goToSection(sectionId) {
         const urlParams = new URLSearchParams(window.location.search);
         if (urlParams.get('view') && urlParams.get('view') !== 'home') {
@@ -110,14 +96,5 @@ class Router {
             if (e.deltaY > 0 && this.currentSlideIndex < this.slides.length - 1) { this.currentSlideIndex++; this.updateVerticalSlide(); }
             else if (e.deltaY < 0 && this.currentSlideIndex > 0) { this.currentSlideIndex--; this.updateVerticalSlide(); }
         }, { passive: false });
-    }
-
-    setupPopState() {
-        window.addEventListener('popstate', (e) => {
-            const targetView = e.state && e.state.view ? e.state.view : 'home';
-            // 當信眾按「瀏覽器」的上一頁鍵時，我們也要把內部記憶拿掉最後一個，保持同步
-            this.historyStack.pop();
-            this.renderView(targetView);
-        });
     }
 }
