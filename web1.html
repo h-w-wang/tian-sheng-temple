@@ -3,7 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>信仰 ‧ 重塑 | 頂級寺廟美學</title>
+    <title>天聖府</title>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const canvas = document.createElement('canvas');
+            canvas.width = 64; 
+            canvas.height = 64;
+            const ctx = canvas.getContext('2d');
+            const img = new Image();
+            
+            img.onload = () => {
+                // 1. 在畫布上畫一個正圓形遮罩
+                ctx.beginPath();
+                ctx.arc(32, 32, 32, 0, Math.PI * 2);
+                ctx.clip();
+                
+                // 2. 把logo塞進這個圓裡面
+                ctx.drawImage(img, 0, 0, 64, 64);
+                
+                // 3. 把切好的圓圖轉成透明 PNG
+                let link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+                link.type = 'image/png';
+                link.rel = 'icon';
+                link.href = canvas.toDataURL('image/png');
+                document.head.appendChild(link);
+            };
+            
+            // 這裡放你原本那張圖片的路徑！
+            img.src = 'source/logo_white1.jpg'; 
+        });
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
