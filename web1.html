@@ -100,7 +100,7 @@
             <div class="flex flex-col gap-6 border-b border-white/10 pb-10">
                 <p class="text-brand-gold text-xs tracking-[0.3em] font-bold" data-i18n="nav_menu_label">首頁導覽</p>
                 <button onclick="appMobileMenu.navigate('section', 'hero')" class="text-left text-2xl font-black tracking-widest text-white hover:text-brand-gold transition duration-300" data-i18n="nav_home">主畫面</button>
-                <button onclick="appMobileMenu.navigate('section', 'gallery')" class="text-left text-2xl font-black tracking-widest text-white hover:text-brand-gold transition duration-300" data-i18n="nav_gallery">精彩瞬間</button>
+                <button onclick="appMobileMenu.navigate('section', 'gallery')" class="text-left text-2xl font-black tracking-widest text-white hover:text-brand-gold transition duration-300" data-i18n="nav_gallery">相關照片</button>
                 <button onclick="appMobileMenu.navigate('section', 'events')" class="text-left text-2xl font-black tracking-widest text-white hover:text-brand-gold transition duration-300" data-i18n="nav_events">最新活動</button>
                 <button onclick="appMobileMenu.navigate('section', 'visit')" class="text-left text-2xl font-black tracking-widest text-white hover:text-brand-gold transition duration-300" data-i18n="nav_visit">參拜指南</button>
             </div>
@@ -117,7 +117,7 @@
 
             <section id="hero" class="h-screen w-full relative flex flex-col justify-center items-center text-center px-4">
                 <div class="absolute inset-0 z-0 bg-brand-black/50"></div>
-                <img src="https://res.cloudinary.com/dk0xndkvr/image/upload/v1775643839/IMG_0311_amgb7x.webp" class="absolute inset-0 w-full h-full object-cover z-[-1] opacity-70">
+                <img src="https://res.cloudinary.com/dk0xndkvr/image/upload/v1775643839/IMG_0311.webp" class="absolute inset-0 w-full h-full object-cover z-[-1] opacity-70">
                 <div class="relative z-20 flex flex-col items-center justify-center h-full text-center px-4">
                 <h1 data-i18n="hero_title" class="hidden"></h1>
                 <p data-i18n="hero_sub" 
@@ -129,7 +129,6 @@
             </section>
 
             <section id="gallery" class="h-screen w-full relative bg-brand-black flex flex-col justify-center border-b border-white/5 overflow-hidden">
-                <h2 class="text-center text-sm md:text-base font-bold text-brand-gold mb-8 tracking-[0.3em] relative z-30 pointer-events-none" data-i18n="gallery_title">MOMENTS / 瞬間</h2>
                 <div class="relative w-full">
                     <button id="btn-prev" onclick="appGallery.slide(-1)" class="flex absolute left-2 md:left-4 lg:left-12 top-1/2 -translate-y-1/2 z-40 w-10 h-10 md:w-14 md:h-14 bg-neutral-800 border-2 border-gray-400 rounded-full items-center justify-center text-white hover:text-brand-gold hover:border-brand-gold hover:scale-110 transition-all duration-300 opacity-0 pointer-events-none">←</button>
                     
@@ -221,14 +220,14 @@
             
             <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                 
-                <div onclick="loadCloudinaryAlbum('2019_pilgrimage', 'gallery-2019', 'view-album2019')" class="aspect-[4/5] w-full relative bg-brand-darkgray border-2 border-white/10 hover:border-brand-gold transition-colors duration-300 flex flex-col items-center justify-end group cursor-pointer overflow-hidden">
-                    <img src="https://res.cloudinary.com/dk0xndkvr/image/upload/v1775713548/IMG_0311.webp" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition duration-700 z-0">
+                <div onclick="appRouter.switchView('album2019')" class="aspect-[4/5] w-full relative bg-brand-darkgray border-2 border-white/10 hover:border-brand-gold transition-colors duration-300 flex flex-col items-center justify-end group cursor-pointer overflow-hidden">
+                    <img src="https://res.cloudinary.com/dk0xndkvr/image/upload/v1775720884/c86fab81-8a92-49c9-80e0-231b29d2789c.webp" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition duration-700 z-0">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10 pointer-events-none"></div>
                     <span class="text-gray-300 group-hover:text-brand-gold font-bold tracking-widest relative z-20 mb-8 transition duration-300 text-lg" data-i18n="album1_title">2019 進香</span>
                 </div>
 
-                <div onclick="loadCloudinaryAlbum('2024_promotion', 'gallery-2024', 'view-album2024')" class="aspect-[4/5] w-full relative bg-brand-darkgray border-2 border-white/10 hover:border-brand-gold transition-colors duration-300 flex flex-col items-center justify-end group cursor-pointer overflow-hidden">
-                    <img src="https://res.cloudinary.com/dk0xndkvr/image/upload/v1775713548/IMG_0315.webp" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition duration-700 z-0">
+                <div onclick="appRouter.switchView('album2024')" class="aspect-[4/5] w-full relative bg-brand-darkgray border-2 border-white/10 hover:border-brand-gold transition-colors duration-300 flex flex-col items-center justify-end group cursor-pointer overflow-hidden">
+                    <img src="https://res.cloudinary.com/dk0xndkvr/image/upload/v1775717048/9246bae8-05d0-46f8-a51a-65e73be0cbb0.webp" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition duration-700 z-0">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10 pointer-events-none"></div>
                     <span class="text-gray-300 group-hover:text-brand-gold font-bold tracking-widest relative z-20 mb-8 transition duration-300 text-lg" data-i18n="album2_title">2024 祭天台</span>
                 </div>

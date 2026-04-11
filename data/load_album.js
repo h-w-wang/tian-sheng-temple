@@ -1,24 +1,35 @@
 // data/load_album.js
 
-function loadCloudinaryAlbum(tag, galleryId, viewName) {
-    // 1. 叫 Router 切換房間 (這會處理歷史紀錄跟 Alt + 左鍵)
-    if (window.appRouter) {
-        window.appRouter.switchView(viewName);
-    }
-
+function loadCloudinaryAlbum(tag, galleryId) {
+    console.log("🚀 準備載入相簿！標籤：", tag, " / 容器 ID：", galleryId);
+    
     const cloudName = 'dk0xndkvr'; 
     const listUrl = `https://res.cloudinary.com/${cloudName}/image/list/${tag}.json?t=${new Date().getTime()}`;
     const gallery = document.getElementById(galleryId);
 
-    if (!gallery) return;
+    if (!gallery) {
+        console.error("❌ 慘了！找不到容器 ID：", galleryId);
+        return;
+    }
 
-    // 清空舊圖並顯示 Loading
-    gallery.innerHTML = '<p class="text-brand-gold text-center w-full py-20 animate-pulse tracking-widest text-xl">LOADING...</p>';
+    // 🚨 刪除那個愚蠢的判定，強制清空並顯示 LOADING
+    gallery.innerHTML = '<p class="text-brand-gold text-center w-full py-20 animate-pulse tracking-widest text-xl">照片載入中...</p>';
 
     fetch(listUrl)
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) throw new Error(`連線異常！狀態碼：${response.status}`);
+            return response.json();
+        })
         .then(data => {
+            console.log(`✅ 成功抓到資料！總共 ${data.resources ? data.resources.length : 0} 張照片`);
+            
             let htmlContent = '';
+            
+            if (!data.resources || data.resources.length === 0) {
+                gallery.innerHTML = '<p class="text-gray-500 text-center w-full py-20 tracking-widest">此相簿目前還沒有照片</p>';
+                return;
+            }
+
             data.resources.forEach(photo => {
                 const imgUrl = `https://res.cloudinary.com/${cloudName}/image/upload/${photo.public_id}.webp`;
                 htmlContent += `
@@ -29,5 +40,8 @@ function loadCloudinaryAlbum(tag, galleryId, viewName) {
             });
             gallery.innerHTML = htmlContent;
         })
-        .catch(err => console.error("抓圖失敗:", err));
+        .catch(err => {
+            console.error("❌ 抓圖徹底失敗:", err);
+            gallery.innerHTML = '<p class="text-red-500 text-center w-full py-20">載入失敗，請打開 F12 檢查錯誤訊息</p>';
+        });
 }

@@ -2,10 +2,9 @@
 
 class Router {
     constructor() {
-        // 🚨 修正：加入所有正確的房間 ID 到名單中
+        // 🚨 修正名單：確保這裡的 ID 與 HTML 中的 view- 後綴完全一致
         this.validViews = ['home', 'album', 'history', 'gods', 'map', 'event1', 'god1', 'god2', 'god3', 'album2019', 'album2024'];
         this.currentActiveView = 'home';
-        this.scrollMemory = {};
         this.slides = ['hero', 'gallery', 'events', 'visit'];
         this.currentSlideIndex = 0;
         this.isAnimating = false;
@@ -15,17 +14,21 @@ class Router {
     }
 
     renderView(targetView) {
-        // 隱藏所有房間
+        // 1. 隱藏所有房間
         this.validViews.forEach(id => {
             const el = document.getElementById('view-' + id);
             if(el) el.classList.add('hide-section');
         });
         
-        // 顯示目標房間
+        // 2. 顯示目標房間
         const target = document.getElementById('view-' + targetView);
         if (target) {
             target.classList.remove('hide-section');
             window.scrollTo(0, 0); 
+            
+            // 🚨 自動觸發抓圖：如果是相簿頁面，自動執行載入照片
+            if (targetView === 'album2019') loadCloudinaryAlbum('2019_pilgrimage', 'gallery-2019');
+            if (targetView === 'album2024') loadCloudinaryAlbum('2024_promotion', 'gallery-2024');
         }
 
         this.currentActiveView = targetView;
@@ -34,11 +37,10 @@ class Router {
         }
     }
 
-    // 💡 關鍵：這是讓 Alt + 方向鍵生效的核心
     switchView(targetView) {
         if (targetView === this.currentActiveView) return;
 
-        // 推送到瀏覽器歷史紀錄
+        // 修正歷史紀錄紀錄格式
         const state = { view: targetView };
         const url = targetView === 'home' ? window.location.pathname : '?view=' + targetView;
         window.history.pushState(state, '', url);
@@ -46,20 +48,19 @@ class Router {
         this.renderView(targetView);
     }
 
-    // 💡 讓 BACK 按鈕遵循瀏覽器歷史
     goBack() {
         window.history.back();
     }
 
     setupPopState() {
-        // 當使用者按 Alt + ← 或瀏覽器後退時觸發
         window.addEventListener('popstate', (e) => {
+            // 當按 Alt + ← 時，從 state 抓取目標 view，預設回到 home
             const targetView = (e.state && e.state.view) ? e.state.view : 'home';
             this.renderView(targetView);
         });
     }
 
-    // 剩下的 goToSection, updateVerticalSlide, setupWheelScroll 維持不變...
+    // goToSection 與其他滾動邏輯維持不變...
     goToSection(sectionId) {
         const urlParams = new URLSearchParams(window.location.search);
         if (urlParams.get('view') && urlParams.get('view') !== 'home') {
