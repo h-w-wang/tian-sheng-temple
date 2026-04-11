@@ -3,7 +3,7 @@
 class Router {
     constructor() {
         // 🚨 修正名單：確保這裡的 ID 與 HTML 中的 view- 後綴完全一致
-        this.validViews = ['home', 'album', 'history', 'gods', 'map', 'event1', 'god1', 'god2', 'god3', 'album2019', 'album2024'];
+        this.validViews = ['home', 'album', 'history', 'gods', 'map', 'event1','god_main', 'god1', 'god2', 'god3', 'album2019', 'album2024'];
         this.currentActiveView = 'home';
         this.slides = ['hero', 'gallery', 'events', 'visit'];
         this.currentSlideIndex = 0;
