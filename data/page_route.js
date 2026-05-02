@@ -29,6 +29,7 @@ class Router {
             // 🚨 自動觸發抓圖：如果是相簿頁面，自動執行載入照片
             if (targetView === 'album2019') loadCloudinaryAlbum('2019_pilgrimage', 'gallery-2019');
             if (targetView === 'album2024') loadCloudinaryAlbum('2024_promotion', 'gallery-2024');
+            if (targetView === 'album2026') loadCloudinaryAlbum('2026_pilgrimage', 'gallery-2026');
         }
 
         this.currentActiveView = targetView;

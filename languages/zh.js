@@ -12,7 +12,7 @@ window.dictZH = {
     btn_see_more: "了解詳情 / SEE MORE →", btn_guide_map: "停車與參拜動線圖",
     visit_title: "參拜<span class='text-brand-gold'>指南</span>", visit_desc: "我們敞開大門，迎接每一位尋求平靜的靈魂。",
     info_time: "🕒 時間", info_time1: "每日08:00-20:00", info_loc: "📍 位置", info_loc1: "雲林縣土庫鎮後埔里雙人厝23號", info_tel: "📞 電話", 
-    page_album_title: "歷年<span class='text-brand-gold'>盛典</span>", album1_title: "2019 進香", album2_title:"2024 祭天台",
+    page_album_title: "歷年<span class='text-brand-gold'>盛典</span>", album1_title: "2019 進香", album2_title:"2024 祭天台", album3_title:"2026 進香",
     
     page_history_title: "歷史沿革", 
     history_year_label: "創立起始年：", history_year_value: "民國68年", history_desc_label: "建立沿革：",
@@ -32,6 +32,6 @@ window.dictZH = {
     map_step1_title: "停車資訊", map_step1_desc: "廟埕前方設有專屬香客停車場，可容納<span class='whitespace-nowrap'>約 3 輛小型車</span>。",
     map_step2_title: "參拜動線", map_step2_desc: "入廟請由「龍門（右側）」進、「虎門（左側）」出。<br><br>參拜順序依次為：<span class='whitespace-nowrap'>天公爐</span> → <span class='whitespace-nowrap'>主祀聖仁保生大帝</span> → <span class='whitespace-nowrap'>龍邊配祀妙蓮觀音佛祖</span> → <span class='whitespace-nowrap'>虎邊配祀莫府千歲與武財神</span>。",
     map_step3_title: "無障礙設施", map_step3_desc: "本府設有完善之無障礙坡道與洗手間，<span class='whitespace-nowrap'>如有輪椅或特殊需求</span>，<span class='whitespace-nowrap'>歡迎隨時向廟方人員尋求協助</span>。",
-    event1_detail_title: "2026進香", event1_detail_desc: "預計舉行於國歷2026.04.26(日)，農曆三月初十，地點 : 天聖府 -> 民雄西安保生大帝廟。<br>集合時間:早上6:45,出發時間:早上7:00",
+    event1_title:"進香行程", event1_subtitle:"天聖府進香行程表", event1_label1:"委員請神尊上轎", event1_label2:"團拜", event1_label3:"正式出發", event1_label4:"到達民雄保生大帝廟", event1_label5:"請神尊上轎並準備返回土庫鎮",
     god1_detail_p1: "民國76年農曆十月十九日，本里雙人厝黃虎元帥於此日開光，正式加入本府救苦。", god2_detail_p1: "民國76年農曆十月十九日，來自屏東縣潮州劉厝里武聖宮觀音佛祖於此日開光，正式加入本府救苦。本府觀音佛祖曾用甘露水治好無數凶宅惡靈、精神異常之病患，因此於民國103年接令被玉皇大帝敕封「妙蓮觀音佛祖」頭銜。", god3_detail_p1: "民國85年間聖仁保生大帝指示要順利建廟，需供奉北港新街武德宮五路財神武財神，故迎回武財神加入本府。<br>※每年農曆過年期間可向武財神祈求發財金"
 };

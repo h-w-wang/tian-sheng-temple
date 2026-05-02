@@ -190,6 +190,11 @@
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10 pointer-events-none"></div>
                     <span class="text-gray-300 group-hover:text-brand-gold font-bold tracking-widest relative z-20 mb-8 transition duration-300 text-3xl" data-i18n="album2_title">2024 祭天台</span>
                 </div>
+                <div onclick="appRouter.switchView('album2026')" class="aspect-[4/5] w-full relative bg-brand-darkgray border-2 border-white/10 hover:border-brand-gold transition-colors duration-300 flex flex-col items-center justify-end group cursor-pointer overflow-hidden">
+                    <img src="https://res.cloudinary.com/dk0xndkvr/image/upload/v1777739993/IMG_0586.webp" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition duration-700 z-0">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10 pointer-events-none"></div>
+                    <span class="text-gray-300 group-hover:text-brand-gold font-bold tracking-widest relative z-20 mb-8 transition duration-300 text-3xl" data-i18n="album3_title">2026 進香</span>
+                </div>
             </div>
         </div>
     </div>
@@ -310,18 +315,63 @@
         </div>
     </div>
 
-    <div id="view-event1" class="hide-section h-screen overflow-y-auto pt-28 px-6 bg-brand-black fade-in relative">
-        <div class="max-w-7xl w-full mx-auto pb-32">
-            <div class="flex flex-col md:flex-row md:items-end gap-4 md:gap-8 mb-12 border-b border-white/10 pb-6">
-                <button onclick="appRouter.goBack()" class="text-gray-400 hover:text-brand-gold tracking-[0.2em] text-sm md:text-lg font-bold transition duration-300 flex items-center gap-2 md:pb-2"><span class="text-2xl">←</span> BACK</button>
-                <h2 class="text-4xl md:text-6xl font-black tracking-widest text-brand-gold leading-none" data-i18n="event1_detail_title">2026進香</h2>
+    <div id="view-event1" class="hide-section h-screen overflow-y-auto pt-28 px-6 bg-brand-black fade-in relative no-scrollbar">
+        <div class="max-w-4xl w-full mx-auto pb-40">
+            <div class="flex flex-col md:flex-row md:items-end gap-4 md:gap-8 mb-6 border-b border-white/10 pb-6">
+                <button onclick="appRouter.goBack()" class="text-gray-400 hover:text-brand-gold tracking-[0.2em] text-sm md:text-lg font-bold transition duration-300 flex items-center gap-2 md:pb-2">
+                    <span class="text-2xl">←</span> BACK
+                </button>
+                <h2 class="text-4xl md:text-6xl font-black tracking-widest text-white uppercase leading-none">2026 <span class="text-brand-gold" data-i18n="event1_title">進香行程</span></h2>
             </div>
-            <div class="w-full max-w-5xl text-gray-400 leading-loose tracking-wider text-lg text-justify">
-                <p data-i18n="event1_detail_desc">預計舉行於2026.04.26...</p>
+            <div class="mb-20 pl-2">
+                <p class="text-gray-500 tracking-[0.4em] text-[20px] uppercase" data-i18n="event1_subtitle">天聖府進香行程表</p>
+            </div>
+            <div class="relative">
+                <div class="flex flex-col">
+                    <div class="relative pb-28 timeline-item group cursor-pointer" onclick="toggleHighlight(0)">
+                        <div class="absolute left-4 md:left-6 -translate-x-1/2 top-0 bottom-0 w-[1px] bg-white z-0 timeline-line transition-colors duration-500"></div>
+                        <div class="absolute left-4 md:left-6 -translate-x-1/2 top-2 w-4 h-4 rounded-full border-2 border-white bg-brand-black transition-all duration-500 timeline-dot z-10"></div>
+                        <div class="pl-12 md:pl-20 flex flex-col gap-4 transition-all duration-500 origin-left timeline-content-wrapper">
+                            <span class="text-white text-sm font-bold tracking-widest timeline-time" data-i18n="event1_time1">06:30 AM</span>
+                            <h3 class="text-2xl md:text-3xl font-bold tracking-widest text-white timeline-title" data-i18n="event1_label1">鳴炮啟程</h3>
+                        </div>
+                    </div>
+                    <div class="relative pb-28 timeline-item group cursor-pointer" onclick="toggleHighlight(1)">
+                        <div class="absolute left-4 md:left-6 -translate-x-1/2 top-0 bottom-0 w-[1px] bg-white z-0 timeline-line transition-colors duration-500"></div>
+                        <div class="absolute left-4 md:left-6 -translate-x-1/2 top-2 w-4 h-4 rounded-full border-2 border-white bg-brand-black transition-all duration-500 timeline-dot z-10"></div>
+                        <div class="pl-12 md:pl-20 flex flex-col gap-4 transition-all duration-500 origin-left timeline-content-wrapper">
+                            <span class="text-white text-sm font-bold tracking-widest timeline-time" data-i18n="event1_time2">07:00 AM</span>
+                            <h3 class="text-2xl md:text-3xl font-bold tracking-widest text-white timeline-title" data-i18n="event1_label2">抵達祖廟</h3>
+                        </div>
+                    </div>
+                    <div class="relative pb-28 timeline-item group cursor-pointer" onclick="toggleHighlight(2)">
+                        <div class="absolute left-4 md:left-6 -translate-x-1/2 top-0 bottom-0 w-[1px] bg-white z-0 timeline-line transition-colors duration-500"></div>
+                        <div class="absolute left-4 md:left-6 -translate-x-1/2 top-2 w-4 h-4 rounded-full border-2 border-white bg-brand-black transition-all duration-500 timeline-dot z-10"></div>
+                        <div class="pl-12 md:pl-20 flex flex-col gap-4 transition-all duration-500 origin-left timeline-content-wrapper">
+                            <span class="text-white text-sm font-bold tracking-widest timeline-time" data-i18n="event1_time3">07:20 AM</span>
+                            <h3 class="text-2xl md:text-3xl font-bold tracking-widest text-white timeline-title" data-i18n="event1_label3">祝壽大典</h3>
+                        </div>
+                    </div>
+                    <div class="relative pb-28 timeline-item group cursor-pointer" onclick="toggleHighlight(3)">
+                        <div class="absolute left-4 md:left-6 -translate-x-1/2 top-0 bottom-0 w-[1px] bg-white z-0 timeline-line transition-colors duration-500"></div>
+                        <div class="absolute left-4 md:left-6 -translate-x-1/2 top-2 w-4 h-4 rounded-full border-2 border-white bg-brand-black transition-all duration-500 timeline-dot z-10"></div>
+                        <div class="pl-12 md:pl-20 flex flex-col gap-4 transition-all duration-500 origin-left timeline-content-wrapper">
+                            <span class="text-white text-sm font-bold tracking-widest timeline-time" data-i18n="event1_time4">08:50 PM</span>
+                            <h3 class="text-2xl md:text-3xl font-bold tracking-widest text-white timeline-title" data-i18n="event1_label4">回鑾安座</h3>
+                        </div>
+                    </div>
+                    <div class="relative pb-0 timeline-item group cursor-pointer" onclick="toggleHighlight(4)">
+                        <div class="absolute left-4 md:left-6 -translate-x-1/2 top-0 h-8 w-[1px] bg-white z-0 timeline-line transition-colors duration-500"></div>
+                        <div class="absolute left-4 md:left-6 -translate-x-1/2 top-2 w-4 h-4 rounded-full border-2 border-white bg-brand-black transition-all duration-500 timeline-dot z-10"></div>
+                        <div class="pl-12 md:pl-20 flex flex-col gap-4 transition-all duration-500 origin-left timeline-content-wrapper">
+                            <span class="text-white text-sm font-bold tracking-widest timeline-time" data-i18n="event1_time5">09:30 AM</span>
+                            <h3 class="text-2xl md:text-3xl font-bold tracking-widest text-white timeline-title" data-i18n="event1_label5">祝壽大典</h3>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
     <div id="view-god1" class="hide-section h-screen overflow-y-auto pt-28 px-6 bg-brand-darkgray fade-in relative">
         <div class="max-w-7xl w-full mx-auto pb-32">
             <div class="flex flex-col md:flex-row md:items-end gap-4 md:gap-8 mb-12 border-b border-white/10 pb-6">
@@ -371,7 +421,7 @@
         <div class="max-w-7xl w-full mx-auto pb-32">
             <div class="flex flex-col md:flex-row md:items-end gap-4 md:gap-8 mb-12 border-b border-white/10 pb-6">
                 <button onclick="appRouter.goBack()" class="text-gray-400 hover:text-brand-gold tracking-[0.2em] text-sm md:text-lg font-bold transition duration-300 flex items-center gap-2 md:pb-2"><span class="text-2xl">←</span> BACK</button>
-                <h2 class="text-4xl md:text-6xl font-black tracking-widest text-brand-gold leading-none">2019 天聖府進香</h2>
+                <h2 class="text-4xl md:text-6xl font-black tracking-widest text-brand-gold leading-none" data-i18n="album1_title">2019 進香</h2>
             </div>
             <div id="gallery-2019" class="columns-1 sm:columns-2 md:columns-3 gap-4 max-w-7xl mx-auto space-y-4"></div>
         </div>
@@ -381,9 +431,19 @@
         <div class="max-w-7xl w-full mx-auto pb-32">
             <div class="flex flex-col md:flex-row md:items-end gap-4 md:gap-8 mb-12 border-b border-white/10 pb-6">
                 <button onclick="appRouter.goBack()" class="text-gray-400 hover:text-brand-gold tracking-[0.2em] text-sm md:text-lg font-bold transition duration-300 flex items-center gap-2 md:pb-2"><span class="text-2xl">←</span> BACK</button>
-                <h2 class="text-4xl md:text-6xl font-black tracking-widest text-brand-gold leading-none">2024 祭天台</h2>
+                <h2 class="text-4xl md:text-6xl font-black tracking-widest text-brand-gold leading-none" data-i18n="album2_title">2024 祭天台</h2>
             </div>
             <div id="gallery-2024" class="columns-1 sm:columns-2 md:columns-3 gap-4 max-w-7xl mx-auto space-y-4"></div>
+        </div>
+    </div>
+
+    <div id="view-album2026" class="hide-section h-screen overflow-y-auto pt-28 px-6 bg-brand-black fade-in relative">
+        <div class="max-w-7xl w-full mx-auto pb-32">
+            <div class="flex flex-col md:flex-row md:items-end gap-4 md:gap-8 mb-12 border-b border-white/10 pb-6">
+                <button onclick="appRouter.goBack()" class="text-gray-400 hover:text-brand-gold tracking-[0.2em] text-sm md:text-lg font-bold transition duration-300 flex items-center gap-2 md:pb-2"><span class="text-2xl">←</span> BACK</button>
+                <h2 class="text-4xl md:text-6xl font-black tracking-widest text-brand-gold leading-none" data-i18n="album3_title">2026 進香</h2>
+            </div>
+            <div id="gallery-2026" class="columns-1 sm:columns-2 md:columns-3 gap-4 max-w-7xl mx-auto space-y-4"></div>
         </div>
     </div>
 
@@ -397,6 +457,57 @@
     <script src="data/load_album.js"></script>
     <script src="data/mobile.js"></script>
     <script src="data/web_initialize.js"></script>
+    <script>
+    let activeTimelineIndex = -1;
+
+    function toggleHighlight(index) {
+        const items = document.querySelectorAll('.timeline-item');
+        
+        // 點擊同一個點，則還原
+        if (activeTimelineIndex === index) {
+            activeTimelineIndex = -1;
+            items.forEach(item => resetItemStyle(item));
+            return;
+        }
+
+        activeTimelineIndex = index;
+        
+        items.forEach((item, i) => {
+            if (i === index) {
+                // ★ 選中狀態：金點、金字、放大
+                const dot = item.querySelector('.timeline-dot');
+                const time = item.querySelector('.timeline-time');
+                const title = item.querySelector('.timeline-title');
+                const desc = item.querySelector('.timeline-desc');
+                const wrapper = item.querySelector('.timeline-content-wrapper');
+
+                if(dot) dot.className = "absolute left-4 md:left-6 -translate-x-1/2 top-2 w-4 h-4 rounded-full border-2 border-brand-gold bg-brand-gold shadow-[0_0_15px_rgba(212,175,55,0.5)] transition-all duration-500 timeline-dot z-10";
+                if(time) time.className = "text-brand-gold text-sm font-bold tracking-widest transition-all duration-500 timeline-time";
+                if(title) title.className = "text-2xl md:text-3xl font-bold tracking-widest text-brand-gold transition-all duration-500 timeline-title";
+                if(desc) desc.className = "text-white text-base leading-relaxed tracking-wider transition-all duration-500 timeline-desc opacity-100";
+                if(wrapper) wrapper.style.transform = "scale(1.1)"; 
+            } else {
+                // ★ 非選中狀態：恢復預設
+                resetItemStyle(item);
+            }
+        });
+    }
+
+    function resetItemStyle(item) {
+        const dot = item.querySelector('.timeline-dot');
+        const time = item.querySelector('.timeline-time');
+        const title = item.querySelector('.timeline-title');
+        const desc = item.querySelector('.timeline-desc');
+        const wrapper = item.querySelector('.timeline-content-wrapper');
+
+        // 回復為預設狀態：白邊空心點、白字、正常大小
+        if(dot) dot.className = "absolute left-4 md:left-6 -translate-x-1/2 top-2 w-4 h-4 rounded-full border-2 border-white bg-brand-black transition-all duration-500 timeline-dot z-10";
+        if(time) time.className = "text-white text-sm font-bold tracking-widest transition-all duration-500 timeline-time";
+        if(title) title.className = "text-2xl md:text-3xl font-bold tracking-widest text-white transition-all duration-500 timeline-title";
+        if(desc) desc.className = "text-white/70 text-base leading-relaxed tracking-wider transition-all duration-500 timeline-desc";
+        if(wrapper) wrapper.style.transform = "scale(1)"; 
+    }
+    </script>
 
 </body>
 </html>

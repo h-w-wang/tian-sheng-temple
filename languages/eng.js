@@ -12,7 +12,7 @@ window.dictEN = {
     btn_see_more: "SEE MORE →", btn_guide_map: "PARKING & ROUTE MAP",
     visit_title: "VISIT <span class='text-brand-gold'>US</span>", visit_desc: "Our doors are open to every soul seeking peace.",
     info_time: "🕒 OPEN", info_time1: "08:00-20:00 daily", info_loc: "📍 LOC", info_loc1: "No. 23, Shuangrencuo, Tuku Township, Yunlin County", info_tel: "📞 TEL", 
-    page_album_title: "HISTORIC <span class='text-brand-gold'>ALBUMS</span>", album1_title: "2019 Pilgrimage",
+    page_album_title: "HISTORIC <span class='text-brand-gold'>ALBUMS</span>", album1_title: "2019 Pilgrimage",album2_title: "2024 Promotion",album3_title: "2026 Pilgrimage",
     
     page_history_title: "OUR HISTORY", 
     history_year_label: "ESTABLISHED: ", history_year_value: "1979", history_desc_label: "HISTORY: ",
@@ -32,6 +32,6 @@ window.dictEN = {
     map_step1_title: "PARKING INFO", map_step1_desc: "An exclusive parking lot for worshippers is located in front of the temple, accommodating about 3 cars. ",
     map_step2_title: "WORSHIP ROUTE", map_step2_desc: "Please enter through the Dragon Gate (right) and exit through the Tiger Gate (left). The worship sequence is: Tiangong Censer → Main Deity Baosheng Dadi → Dragon Side(right) Deities Miaolian Guanyin Buddha → Tiger Side(left) Deities Martial God of Wealth & Mo Fu Qian Sui.",
     map_step3_title: "ACCESSIBILITY", map_step3_desc: "The temple is equipped with accessible ramps and restrooms. If you need wheelchair assistance, please feel free to ask our staff.",
-    event1_detail_title: "2026 PILGRIMAGE", event1_detail_desc: "The event is scheduled for April 26, 2026(Sun), and scheduled to meet at 6:45AM and depart at 7:00 AM",
+    event1_title:"Pilgrimage", event1_subtitle: "Tian Sheng Temple Pilgrimage Itinerary",event1_label1: "Committee Invites Deity to Palanquin",event1_label2: "Group Worship Ceremony",event1_label3: "Official Departure",event1_label4: "Arrival at Minxiong Baosheng Dadi Temple", event1_label5: "Prepare for Return to Tuku Township",
     god1_detail_p1: "On the 19th day of the tenth lunar month in 1987, the Huang Hu Marshal double house in this village was consecrated and officially joined the local government's relief efforts.", god2_detail_p1: "On the 19th day of the tenth lunar month in 1987, the Guanyin Buddha statue from Wusheng Temple in Liucuo Village, Chaozhou, Pingtung County, was consecrated and officially joined this temple's salvation of suffering. This temple's Guanyin Buddha statue has cured countless haunted houses, evil spirits, and mentally unstable patients with its nectar. Therefore, in 2014, it was bestowed the title 'Miraculous Lotus Guanyin Buddha' by the Jade Emperor.", god3_detail_p1: "In 1996, the Holy Emperor Baosheng instructed that in order to build a temple smoothly, it was necessary to enshrine the Martial God of Wealth from the Five Gods of Wealth at the Wude Palace on Beigang New Street. Therefore, the Martial God of Wealth was welcomed back to the temple."
 };
